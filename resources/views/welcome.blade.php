@@ -34,7 +34,7 @@
             <td>{{ $book->author_id }}</td>
             <td>{{ $book->ISBN }}</td>
             <td>{{ $book->pub_year }}</td>
-            <td>{{ $book->available ? 'Yes' : 'No' }}</td>
+            <td>{{ $book->available == 1 ? 'Yes' : ($book->available == 2 ? 'No' : '') }}</td>
         </tr>
     @endforeach
     </tbody>
